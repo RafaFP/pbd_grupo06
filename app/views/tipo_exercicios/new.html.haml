@@ -1,0 +1,10 @@
+#new-tipo-exercicio
+  %h3= "Cadastro de novo exercício"
+  - @tipo_exercicio = TipoExercicio.new
+
+  = simple_form_for @tipo_exercicio, :html => { :class => 'single-column' }, :url => tipo_exercicios_path do |f|
+    .modal-body
+      = f.input :nome_exercicio, :label => false, :autofocus => true
+      = f.input :video, :label => false, :as => :text
+    .modal-footer
+      = f.submit "Create"

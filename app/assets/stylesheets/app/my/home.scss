@@ -1,0 +1,19 @@
+@import "bootstrap/mixins";
+
+body.my.home {
+
+  text-align: center;
+  background-color: #cccccc;
+
+  h3 {
+  	font-size: 40px;
+  	margin: 25px;
+  }
+
+  #buttons {
+  	text-align:center;
+  	margin: auto;
+    width: 450px;
+  }
+
+}

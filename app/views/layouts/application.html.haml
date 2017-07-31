@@ -1,0 +1,34 @@
+!!! Strict
+%html{:lang => I18n.locale.to_s}
+
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-type"}
+    %title= content_for?(:title) ? yield(:title) : "PBD"
+    = csrf_meta_tag
+
+    = stylesheet_link_tag "application_print", :media => "print"
+    = stylesheet_link_tag "application", :media => "screen, projection"
+    = stylesheet_link_tag "_development" unless Rails.env == "production"
+    = yield :stylesheets
+
+    = yield :headers
+
+  %body{:class => "#{controller_name_for_view} #{params[:action]} application"}
+    #site
+      #content
+        #content-middle
+
+          -# an internal menu for the page to navigate through sub-pages
+          - if content_for?(:page_menu)
+            #page-menu
+              = yield :page_menu
+
+          -# a list of actions for this page (e.g. destroy resource)
+          - if content_for?(:page_actions)
+            #page-actions
+              = yield :page_actions
+
+          -# the actual page content
+          = yield
+
+      #footer-pusher
