@@ -1,14 +1,16 @@
 @import "bootstrap/mixins";
 
 body.tipo_exercicios.new {
+  font-family: Courier New;
   text-align: center;
-  background-color: #cccccc;
+  background-color: #3B5998;
   
   #new-tipo-exercicio {
+    border-radius: 30px;
+    padding: 2px 0 20px 0;
     width: 60%;
-    margin: auto;
-    background-color: #999999;
-    border: 1px bold #aaaaa;
+    margin: 40px auto;
+    background-color: #eedddd;
 
     h3 {
       font-size: 40px;

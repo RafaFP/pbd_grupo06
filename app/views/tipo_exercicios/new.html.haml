@@ -4,7 +4,7 @@
 
   = simple_form_for @tipo_exercicio, :html => { :class => 'single-column' }, :url => tipo_exercicios_path do |f|
     .modal-body
-      = f.input :nome_exercicio, :label => false, :autofocus => true
-      = f.input :video, :label => false, :as => :text
+      = f.input :nome_exercicio, :label => false, :autofocus => true, placeholder: "Nome do Exercício"
+      = f.input :video, :label => false, :as => :text, placeholder: "Link do Vídeo do Exercício"
     .modal-footer
       = f.submit "Create"

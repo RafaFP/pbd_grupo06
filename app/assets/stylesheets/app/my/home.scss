@@ -1,19 +1,26 @@
 @import "bootstrap/mixins";
 
 body.my.home {
+  background-color: #3B5998;
 
-  text-align: center;
-  background-color: #cccccc;
+  #content {
+    border-radius: 30px;
+    width: 60%;
+    margin: 40px auto;
+    padding: 2px 0 20px 0;
+    font-family: Courier New;
+    text-align: center;
+    background-color: #eedddd;
 
-  h3 {
-  	font-size: 40px;
-  	margin: 25px;
+    h3 {
+      font-size: 40px;
+      margin: 25px;
+    }
+
+    #buttons {
+      text-align:center;
+      margin: auto;
+      width: 450px;
+    }
   }
-
-  #buttons {
-  	text-align:center;
-  	margin: auto;
-    width: 450px;
-  }
-
 }
