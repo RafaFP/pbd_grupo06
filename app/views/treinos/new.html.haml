@@ -1,0 +1,16 @@
+#new-treino
+  %h3= "Cadastro de novo Treino"
+  - @treino = Treino.new
+  - alunos_cpf = Aluno.all.map { |x| [x.cpf, x.cpf] }.uniq
+
+  = simple_form_for @treino, :html => { :class => 'single-column' }, :url => treinos_path do |f|
+    .modal-body
+      = f.input :cpf, :as => :select, :label => false, :collection => alunos_cpf, prompt: "Aluno CPF"
+      = f.input :nome_treino, :label => false, placeholder: "Título Treino"
+      = f.input :data_inicio, :label => "Data de Início"
+      = f.input :data_fim, :label => "Data de Fim"
+    .modal-footer
+      #button
+        = f.submit "Criar", :class => 'btn btn-success btn-block'
+      #home-button
+        = link_to "Home", my_home_path, :class => 'btn btn-warning btn-block'

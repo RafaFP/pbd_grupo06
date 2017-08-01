@@ -1,0 +1,29 @@
+#new-treino-exercicio
+  %h3= "Cadastro de novo treino-exercicio"
+  - @treino_exercicio = TreinoExercicio.new
+  - treinos_cpf = Treino.all.map { |x| [x.cpf, x.cpf] }.uniq
+  - treinos_nome = Treino.all.map { |x| [x.nome_treino, x.nome_treino] }.uniq
+  - treinos_data = Treino.all.map { |x| [x.data_inicio, x.data_inicio] }.uniq
+  - exercicio_nome = TipoExercicio.all.map { |x| [x.nome_exercicio, x.nome_exercicio] }.uniq
+
+
+  = simple_form_for @treino_exercicio, :html => { :class => 'single-column' }, :url => treino_exercicios_path do |f|
+    .modal-body
+      = f.input :cpf, :as => :select, :label => false, :collection => treinos_cpf, prompt: "Aluno CPF"
+      = f.input :nome_treino, :as => :select, :label => false, :collection => treinos_nome, prompt: "Nome do Treino"
+      = f.input :data_inicio, :as => :select, :label => false, :collection => treinos_data, prompt: "Data de início"
+      = f.input :nome_exercicio, :as => :select, :label => false, :collection => exercicio_nome, prompt: "Nome do Exercício"
+      = f.input :serie, :label => false, placeholder: "Série"
+      = f.input :repeticoes, :label => false, placeholder: "Repetições"
+      = f.input :intervalo, :label => false, placeholder: "Intervalo"
+      = f.input :carga, :label => false, placeholder: "Carga"
+      = f.input :tempo, :label => false, placeholder: "Tempo"
+      = f.input :velocidade, :label => false, placeholder: "Velocidade"
+      = f.input :inclinacao, :label => false, placeholder: "Inclinação"
+      = f.input :nivel, :label => false, placeholder: "Nível"
+      = f.input :observacao, :label => false, :as => :text, placeholder: "Observação"
+    .modal-footer
+      #button
+        = f.submit "Criar", :class => 'btn btn-success btn-block'
+      #home-button
+        = link_to "Home", my_home_path, :class => 'btn btn-warning btn-block'

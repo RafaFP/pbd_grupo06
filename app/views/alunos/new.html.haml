@@ -5,14 +5,14 @@
   = simple_form_for @aluno, :html => { :class => 'single-column' }, :url => alunos_path do |f|
     .modal-body
       = f.input :cpf, :label => false, :autofocus => true, placeholder: "CPF do Aluno"
-      = f.input :data_nascimento, :label => "Data de Nasc. do Aluno"
+      = f.input :data_nascimento, :label => "Data de Nasc. do Aluno", as: :date
       = f.input :idade, :label => false, placeholder: "Idade do Aluno"
-      = f.input :sexo, :label => "Sexo do Aluno", :collection => [[true, 'Masculino'], [false, 'Feminino']], as: :radio_buttons
+      = f.input :sexo, :label => "Sexo do Aluno", :collection => [['Masculino', 'Masculino'], ['Feminino', 'Feminino']], as: :radio_buttons
       = f.input :telefone, :label => false, placeholder: "Telefone do Aluno"
       = f.input :email, :label => false, placeholder: "E-mail do Aluno"
       = f.input :peso_atual, :label => false, placeholder: "Peso Atual do Aluno"
       = f.input :peso_habitual, :label => false, placeholder: "Peso Hab. do Aluno"
-      = f.input :pratica_atividade, :label => "Pratica astividade", as: :boolean
+      = f.input :pratica_atividade, :label => "Pratica atividade", as: :boolean
       = f.input :quantidade_atividade, :label => false, placeholder: "Quantidade praticada"
       = f.input :duracao_atividade, :label => false, placeholder: "Duração da atividade"
       = f.input :intensidade_atividade, :label => false, placeholder: "Intensidade da Atividade"
