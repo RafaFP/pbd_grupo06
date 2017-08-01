@@ -2,3 +2,5 @@
 #index-tipo-exercicio
   %h3= "Lista de Exercícios Cadastrados"
   = render "tipo_exercicios/exercicios_list"
+  .home-button
+    = link_to "Home", my_home_path, :class => 'btn btn-warning btn-block'

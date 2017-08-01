@@ -1,14 +1,14 @@
 @import "bootstrap/mixins";
 
-body.tipo_exercicios.index {
+body.treino_exercicios.index {
   font-family: Courier New;
   background-color: #3B5998;
   
-  #index-tipo-exercicio {
+  #index-treino-exercicio {
     text-align: left;
     border-radius: 30px;
     padding: 2px 0 20px 0;
-    width: 60%;
+    width: 85%;
     margin: 40px auto;
     background-color: #eedddd;
     padding-bottom: 30px;
@@ -33,7 +33,7 @@ body.tipo_exercicios.index {
     #home-button {
       float: left;
       display: inline-block;
-      text-align:center;
+      text-align:center;  
     }
   }
 }

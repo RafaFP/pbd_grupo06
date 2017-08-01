@@ -5,6 +5,7 @@
   = simple_form_for @aluno, :html => { :class => 'single-column' }, :url => alunos_path do |f|
     .modal-body
       = f.input :cpf, :label => false, :autofocus => true, placeholder: "CPF do Aluno"
+      = f.input :nome_aluno, :label => false, :autofocus => true, placeholder: "Nome do Aluno"
       = f.input :data_nascimento, :label => "Data de Nasc. do Aluno", as: :date
       = f.input :idade, :label => false, placeholder: "Idade do Aluno"
       = f.input :sexo, :label => "Sexo do Aluno", :collection => [['Masculino', 'Masculino'], ['Feminino', 'Feminino']], as: :radio_buttons

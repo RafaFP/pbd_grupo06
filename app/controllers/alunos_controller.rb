@@ -22,7 +22,7 @@ class AlunosController < ApplicationController
   private
 
   def attrs_for_aluno
-    params.require(:aluno).permit(:cpf, :data_nascimento, :idade, :sexo,
+    params.require(:aluno).permit(:cpf, :nome_aluno, :data_nascimento, :idade, :sexo,
         :telefone, :email, :peso_atual, :peso_habitual, :pratica_atividade,
         :quantidade_atividade, :duracao_atividade, :intensidade_atividade,
         :tempo_inativo, :objetivo, :niveis_condicionamento, :turno_horario,

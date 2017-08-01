@@ -1,0 +1,22 @@
+%table.recording-list.table.table-hover
+  %thead
+    %tr
+      %th.col-sm-1.aluno-cpf-col= "CPF"
+      %th.col-sm-1.aluno-nome-col= "Nome"
+      %th.col-sm-1.aluno-idade-col= "Idade"
+      %th.col-sm-1.aluno-sexo-col= "Sexo"
+      %th.col-sm-1.aluno-tel-col= "Telefone"
+      %th.col-sm-1.aluno-celular-col= "Celular"
+      %th.col-sm-1.aluno-email-col= "E-mail"
+      %th.col-sm-1.aluno-peso-col= "Peso"
+      %th.col-sm-1.aluno-altura-col= "Altura"
+      %th.col-sm-1.aluno-turno-col= "Turno/Horário"
+      %th.col-sm-2.aluno-obs-col= "Observação"
+  
+  %tbody
+    - if Aluno.all.count <= 0
+      %tr
+        %td.nenhum{ colspan: 12 }= "Nenhum Aluno Cadastrado"
+    
+    - Aluno.all.each do |a|
+      = render partial: 'aluno_item', locals: { aluno: a }

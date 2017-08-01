@@ -8,7 +8,7 @@
   %tbody
     - if TipoExercicio.all.count <= 0
       %tr
-        %td{ colspan: 4 }= "Nenhum Exercício Cadastrado"
+        %td.nenhum{ colspan: 3 }= "Nenhum Exercício Cadastrado"
     
     - TipoExercicio.all.each do |e|
       = render partial: 'exercicio_item', locals: { exercicio: e }
