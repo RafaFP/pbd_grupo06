@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20170731030717) do
     t.string  "inclinacao"
     t.string  "nivel"
     t.text    "observacao",     limit: 65535
+    t.index ["data_inicio"], name: "fk_rails_760d1f868b", using: :btree
     t.index ["nome_exercicio"], name: "fk_rails_d5d852a578", using: :btree
     t.index ["nome_treino"], name: "fk_rails_da65693c5c", using: :btree
   end
@@ -63,11 +64,13 @@ ActiveRecord::Schema.define(version: 20170731030717) do
     t.string "nome_treino", null: false
     t.date   "data_inicio", null: false
     t.date   "data_fim"
-    t.index ["nome_treino", "data_inicio"], name: "nome_treino", using: :btree
+    t.index ["data_inicio"], name: "data_inicio", using: :btree
+    t.index ["nome_treino"], name: "nome_treino", using: :btree
   end
 
   add_foreign_key "treino_exercicios", "tipo_exercicios", column: "nome_exercicio", primary_key: "nome_exercicio"
   add_foreign_key "treino_exercicios", "treinos", column: "cpf", primary_key: "cpf"
+  add_foreign_key "treino_exercicios", "treinos", column: "data_inicio", primary_key: "data_inicio"
   add_foreign_key "treino_exercicios", "treinos", column: "nome_treino", primary_key: "nome_treino"
   add_foreign_key "treinos", "alunos", column: "cpf", primary_key: "cpf"
 end

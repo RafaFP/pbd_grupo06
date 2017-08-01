@@ -8,7 +8,8 @@ class CreateTreino < ActiveRecord::Migration[5.0]
     end
 
     execute "ALTER TABLE treinos ADD PRIMARY KEY(cpf, nome_treino, data_inicio);"
-    execute "ALTER TABLE treinos ADD KEY (nome_treino, data_inicio);"
+    execute "ALTER TABLE treinos ADD KEY (nome_treino);"
+    execute "ALTER TABLE treinos ADD KEY (data_inicio);"
     add_foreign_key :treinos, :alunos, column: :cpf, primary_key: "cpf"
   end
 

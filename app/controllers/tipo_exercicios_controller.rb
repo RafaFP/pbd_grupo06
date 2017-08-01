@@ -4,12 +4,12 @@ class TipoExerciciosController < ApplicationController
 
   def create
     @tipo_exercicio = TipoExercicio.new(attrs_for_tipo_exercicio)
-    if @tipo_exercicio.save!
+    if @tipo_exercicio.save
       flash[:success] = 'TipoExercicio criado'
       redirect_to my_home_path
     else
       flash[:error] = "Falha na criação de TipoExercicio"
-      redirect_to my_home_path
+      redirect_to new_tipo_exercicio_path
     end
   end
 

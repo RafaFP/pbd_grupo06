@@ -1,11 +1,11 @@
 @import "bootstrap/mixins";
 
-body.tipo_exercicios.new {
+body.alunos.new {
   font-family: Courier New;
   text-align: center;
   background-color: #3B5998;
   
-  #new-tipo-exercicio {
+  #new-aluno {
     border-radius: 30px;
     padding: 2px 0 20px 0;
     width: 60%;

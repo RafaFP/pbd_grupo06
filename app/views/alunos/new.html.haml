@@ -1,0 +1,30 @@
+#new-aluno
+  %h3= "Cadastro de novo aluno"
+  - @aluno = Aluno.new
+
+  = simple_form_for @aluno, :html => { :class => 'single-column' }, :url => alunos_path do |f|
+    .modal-body
+      = f.input :cpf, :label => false, :autofocus => true, placeholder: "CPF do Aluno"
+      = f.input :data_nascimento, :label => "Data de Nasc. do Aluno"
+      = f.input :idade, :label => false, placeholder: "Idade do Aluno"
+      = f.input :sexo, :label => "Sexo do Aluno", :collection => [[true, 'Masculino'], [false, 'Feminino']], as: :radio_buttons
+      = f.input :telefone, :label => false, placeholder: "Telefone do Aluno"
+      = f.input :email, :label => false, placeholder: "E-mail do Aluno"
+      = f.input :peso_atual, :label => false, placeholder: "Peso Atual do Aluno"
+      = f.input :peso_habitual, :label => false, placeholder: "Peso Hab. do Aluno"
+      = f.input :pratica_atividade, :label => "Pratica astividade", as: :boolean
+      = f.input :quantidade_atividade, :label => false, placeholder: "Quantidade praticada"
+      = f.input :duracao_atividade, :label => false, placeholder: "Duração da atividade"
+      = f.input :intensidade_atividade, :label => false, placeholder: "Intensidade da Atividade"
+      = f.input :tempo_inativo, :label => false, placeholder: "Tempo Inativo"
+      = f.input :objetivo, :label => false, :as => :text, placeholder: "Objetivo do Aluno"
+      = f.input :niveis_condicionamento, :label => false, placeholder: "Níveis de cond."
+      = f.input :turno_horario, :label => false, placeholder: "Turno/Horário"
+      = f.input :celular, :label => false, placeholder: "Celular"
+      = f.input :altura, :label => false, placeholder: "Altura"
+      = f.input :observacao, :label => false, :as => :text, placeholder: "Observação"
+    .modal-footer
+      #button
+        = f.submit "Criar", :class => 'btn btn-success btn-block'
+      #home-button
+        = link_to "Home", my_home_path, :class => 'btn btn-warning btn-block'

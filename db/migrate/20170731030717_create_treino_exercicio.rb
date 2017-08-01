@@ -20,6 +20,7 @@ class CreateTreinoExercicio < ActiveRecord::Migration[5.0]
     add_foreign_key :treino_exercicios, :tipo_exercicios, column: :nome_exercicio, primary_key: "nome_exercicio"
     add_foreign_key :treino_exercicios, :treinos, column: :cpf, primary_key: "cpf"
     add_foreign_key :treino_exercicios, :treinos, column: :nome_treino, primary_key: "nome_treino"
+    add_foreign_key :treino_exercicios, :treinos, column: :data_inicio, primary_key: "data_inicio"
 
   end
 

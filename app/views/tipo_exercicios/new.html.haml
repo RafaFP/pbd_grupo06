@@ -1,3 +1,4 @@
+- page_title "Cadastro Tipo Exercício"
 #new-tipo-exercicio
   %h3= "Cadastro de novo exercício"
   - @tipo_exercicio = TipoExercicio.new
@@ -7,4 +8,7 @@
       = f.input :nome_exercicio, :label => false, :autofocus => true, placeholder: "Nome do Exercício"
       = f.input :video, :label => false, :as => :text, placeholder: "Link do Vídeo do Exercício"
     .modal-footer
-      = f.submit "Create"
+      #button
+        = f.submit "Criar", :class => 'btn btn-success btn-block'
+      #home-button
+        = link_to "Home", my_home_path, :class => 'btn btn-warning btn-block'
