@@ -1,8 +1,17 @@
 - page_title "Home"
 #content
   %h3= "Bem-vindo ao sistema de gestão do banco de dados"
-  #buttons
-    = link_to "Cadastrar novo Tipo Exercício", new_tipo_exercicio_path, :class => 'btn btn-success btn-block'
-    = link_to "Cadastrar novo Aluno", new_aluno_path, :class => 'btn btn-success btn-block'
-    = link_to "Cadastrar novo Treino", new_treino_path, :class => 'btn btn-success btn-block'
-    = link_to "Cadastrar novo Treino Exercício", new_treino_exercicio_path, :class => 'btn btn-success btn-block'
+  #cadastro
+    %h2= "Área de Cadastro"
+    #buttons
+      = link_to "Cadastrar novo Tipo Exercício", new_tipo_exercicio_path, :class => 'btn btn-success btn-block'
+      = link_to "Cadastrar novo Aluno", new_aluno_path, :class => 'btn btn-success btn-block'
+      = link_to "Cadastrar novo Treino", new_treino_path, :class => 'btn btn-success btn-block'
+      = link_to "Cadastrar novo Treino Exercício", new_treino_exercicio_path, :class => 'btn btn-success btn-block'  #cadastro
+  #visualizacao
+    %h2= "Área de Vizualização"
+    #buttons
+      = link_to "Visualizar Tipo Exercícios existentes", tipo_exercicios_path, :class => 'btn btn-success btn-block'
+      = link_to "Visualizar Alunos existentes", alunos_path, :class => 'btn btn-success btn-block'
+      = link_to "Visualizar Treinos existentes", treinos_path, :class => 'btn btn-success btn-block'
+      = link_to "Visualizar Treino Exercícios existentes", treino_exercicios_path, :class => 'btn btn-success btn-block'

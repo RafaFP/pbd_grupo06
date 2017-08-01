@@ -1,0 +1,14 @@
+%table.recording-list.table.table-hover
+  %thead
+    %tr
+      %th.col-sm-offset-1.offset-col
+      %th.col-sm-3.exercicio-nome-col= "Nome do Exercício"
+      %th.col-sm-7.exercicio-video-col= "Link do Vídeo do Exercício"
+  
+  %tbody
+    - if TipoExercicio.all.count <= 0
+      %tr
+        %td{ colspan: 4 }= "Nenhum Exercício Cadastrado"
+    
+    - TipoExercicio.all.each do |e|
+      = render partial: 'exercicio_item', locals: { exercicio: e }

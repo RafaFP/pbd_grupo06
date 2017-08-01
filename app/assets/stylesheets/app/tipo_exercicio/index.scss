@@ -1,0 +1,33 @@
+@import "bootstrap/mixins";
+
+body.tipo_exercicios.index {
+  font-family: Courier New;
+  background-color: #3B5998;
+  
+  #index-tipo-exercicio {
+    text-align: left;
+    border-radius: 30px;
+    padding: 2px 0 20px 0;
+    width: 60%;
+    margin: 40px auto;
+    background-color: #eedddd;
+
+    h3 {
+      text-align:center;
+      font-size: 40px;
+      margin: 25px;
+    }
+
+    #button {
+      float: right;
+      display: inline-block;
+      text-align:center;
+    }
+
+    #home-button {
+      float: left;
+      display: inline-block;
+      text-align:center;
+    }
+  }
+}
