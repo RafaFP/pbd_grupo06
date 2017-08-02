@@ -5,4 +5,5 @@
       = exercicio.nome_exercicio
     %td.exercicio-video-col
       = link_to exercicio.video, exercicio.video
-
+    %td.exercicio-delete-col
+      = button_to "Remover", tipo_exercicio_path(exercicio.id), :method => :delete, :class => 'btn btn-danger btn-block'

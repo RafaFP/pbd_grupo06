@@ -14,11 +14,23 @@ class TipoExerciciosController < ApplicationController
   end
 
   def show
+    redirect_to tipo_exercicios_path
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
+    @tipo_exercicio = TipoExercicio.find_by(nome_exercicio: params[:id])
+    @tipo_exercicio.delete
+    redirect_to tipo_exercicios_path
   end
 
   def index
   end
-
   private
 
   def attrs_for_tipo_exercicio
