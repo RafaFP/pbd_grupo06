@@ -14,11 +14,11 @@
       =aluno.celular
     %td.aluno-email-col
       =aluno.email
-    %td.aluno-peso-col
-      =aluno.peso_atual
-    %td.aluno-altura-col
-      =aluno.altura
+    %td.aluno-peso-altura-col
+      =aluno.peso_atual.to_s + " / " + aluno.altura.to_s
     %td.aluno-turno-col
       =aluno.turno_horario
     %td.aluno-obs-col
       =aluno.observacao
+    %td.delete-col
+      =button_to "Remover", aluno_path(aluno.id), :method => :delete, :class => 'btn btn-danger btn-block'

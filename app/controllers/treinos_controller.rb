@@ -23,6 +23,12 @@ class TreinosController < ApplicationController
   end
 
   def destroy
+    cpf = params[:id].split('/').first
+    treino = params[:id].split('/').second
+    data = params[:id].split('/').third
+    @treino = Treino.where(cpf: cpf, nome_treino: treino, data_inicio: data).first
+    @treino.delete
+    redirect_to treinos_path
   end
 
   def index

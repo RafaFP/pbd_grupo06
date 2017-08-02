@@ -8,19 +8,15 @@
       =treino_exer.data_inicio
     %td.treino_exer-nome_exercicio-col
       =treino_exer.nome_exercicio
-    %td.treino_exer-serie_rep-col
+    %td.treino_exer-serie-rep-col
       =treino_exer.serie.to_s + " / " + treino_exer.repeticoes.to_s
-    %td.treino_exer-intervalo-col
-      =treino_exer.intervalo
-    %td.treino_exer-carga-col
-      =treino_exer.carga
-    %td.treino_exer-tempo-col
-      =treino_exer.tempo
-    %td.treino_exer-velocidade-col
-      =treino_exer.velocidade
-    %td.treino_exer-inclinacao-col
-      =treino_exer.inclinacao
-    %td.treino_exer-nivel-col
-      =treino_exer.nivel
+    %td.treino_exer-intervalo-carga-col
+      =treino_exer.intervalo.to_s + " / " + treino_exer.carga.to_s
+    %td.treino_exer-tempo-velocidade-col
+      =treino_exer.tempo.to_s + " / " + treino_exer.velocidade.to_s
+    %td.treino_exer-inclinacao-nivel-col
+      =treino_exer.inclinacao.to_s + " / " + treino_exer.nivel.to_s
     %td.treino_exer-observacao-col
       =treino_exer.observacao
+    %td.delete-col
+      =button_to "Remover", treino_exercicio_path(treino_exer.id), :method => :delete, :class => 'btn btn-danger btn-block'

@@ -1,0 +1,16 @@
+- page_title "Edição Tipo Exercício"
+#edit-tipo-exercicio
+  %h3= "Edição de novo exercício"
+  - id_exer = request.path.split('/').third
+  - id_exer.gsub!('%20', ' ')
+  - @tipo_exercicio = TipoExercicio.find_by(nome_exercicio: id_exer)
+
+  = simple_form_for @tipo_exercicio, :html => { :class => 'single-column', :method => :put }, :url => tipo_exercicio_path(id_exer) do |f|
+    .modal-body
+      = f.input :nome_exercicio, :label => false, :autofocus => true, placeholder: "Nome do Exercício", disabled: true
+      = f.input :video, :label => false, :as => :text, placeholder: "Link do Vídeo do Exercício"
+    .modal-footer
+      #button
+        = f.submit "Salvar", :class => 'btn btn-success btn-block'
+      #home-button
+        = link_to "Home", my_home_path, :class => 'btn btn-warning btn-block'

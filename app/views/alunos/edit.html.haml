@@ -1,0 +1,33 @@
+#edit-aluno
+  - id_aluno = request.path.split('/')
+  - @aluno = Aluno.find_by(cpf: id_aluno)
+  %h3= "Edição do aluno "
+  #form-aluno
+    = simple_form_for @aluno, :html => { :class => 'single-column' }, :url => aluno_path(id_aluno), wrapper: :horizontal_form, html: { class: "form-horizontal", :method => :put }  do |f|
+      .modal-body
+        = f.input :cpf, :label => "CPF DO ALUNO", :autofocus => true, placeholder: "CPF do Aluno", disabled: true
+        = f.input :nome_aluno, :label => "NOME DO ALUNO", :autofocus => true, placeholder: "Nome do Aluno"
+        = f.input :data_nascimento, :label => "Data de Nasc. do Aluno", as: :date
+        = f.input :idade, :label => "IDADE", placeholder: "Idade do Aluno"
+        = f.input :sexo, :label => "SEXO", :collection => [['Masculino', 'Masculino'], ['Feminino', 'Feminino']], as: :radio_buttons
+        = f.input :telefone, :label => "TELEFONE", placeholder: "Telefone do Aluno"
+        = f.input :email, :label => "E-MAIL", placeholder: "E-mail do Aluno"
+        = f.input :peso_atual, :label => "PESO ATUAL", placeholder: "Peso Atual do Aluno"
+        = f.input :peso_habitual, :label => "PESO HABITUAL", placeholder: "Peso Hab. do Aluno"
+        = f.input :pratica_atividade, :label => "Pratica atividade", as: :boolean
+        = f.input :quantidade_atividade, :label => "Quantidade praticada", placeholder: "Quantidade praticada"
+        = f.input :duracao_atividade, :label => "Duração da atividade", placeholder: "Duração da atividade"
+        = f.input :intensidade_atividade, :label => "Intensidade da Atividade", placeholder: "Intensidade da Atividade"
+        = f.input :tempo_inativo, :label => "Tempo Inativo", placeholder: "Tempo Inativo"
+        = f.input :objetivo, :label => "Objetivo do Aluno", :as => :text, placeholder: "Objetivo do Aluno"
+        = f.input :niveis_condicionamento, :label => "Níveis de cond.", placeholder: "Níveis de cond."
+        = f.input :turno_horario, :label => "Turno/Horário", placeholder: "Turno/Horário"
+        = f.input :celular, :label => "Celular", placeholder: "Celular"
+        = f.input :altura, :label => "Altura", placeholder: "Altura"
+        = f.input :observacao, :label => "Observação", :as => :text, placeholder: "Observação"
+      .modal-footer
+        #home-button
+          = link_to "Home", my_home_path, :class => 'btn btn-warning btn-block'
+        #button
+          = f.submit "Salvar", :class => 'btn btn-success btn-block'
+

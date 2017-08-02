@@ -10,3 +10,5 @@
       =treino.data_inicio
     %td.treino-fim-col
       =treino.data_fim
+    %td.delete-col
+      =button_to "Remover", treino_path(treino.id), :method => :delete, :class => 'btn btn-danger btn-block'
