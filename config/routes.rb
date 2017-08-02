@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :tipo_exercicios, only: [:new, :create, :index, :show]
-  resources :alunos, only: [:new, :create, :index, :show]
-  resources :treinos, only: [:new, :create, :index, :show]
-  resources :treino_exercicios, only: [:new, :create, :index, :show]
+  resources :tipo_exercicios, only: [:new, :create, :index, :show, :edit, :destroy]
+  resources :alunos, only: [:new, :create, :index, :show, :edit, :destroy]
+  resources :treinos, only: [:new, :create, :index, :show, :edit, :destroy]
+  resources :treino_exercicios, only: [:new, :create, :index, :show, :edit, :destroy]
 
   root 'my#home'
 

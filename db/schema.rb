@@ -54,9 +54,7 @@ ActiveRecord::Schema.define(version: 20170731030717) do
     t.string  "inclinacao"
     t.string  "nivel"
     t.text    "observacao",     limit: 65535
-    t.index ["data_inicio"], name: "fk_rails_760d1f868b", using: :btree
     t.index ["nome_exercicio"], name: "fk_rails_d5d852a578", using: :btree
-    t.index ["nome_treino"], name: "fk_rails_da65693c5c", using: :btree
   end
 
   create_table "treinos", primary_key: ["cpf", "nome_treino", "data_inicio"], force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -69,8 +67,8 @@ ActiveRecord::Schema.define(version: 20170731030717) do
   end
 
   add_foreign_key "treino_exercicios", "tipo_exercicios", column: "nome_exercicio", primary_key: "nome_exercicio"
-  add_foreign_key "treino_exercicios", "treinos", column: "cpf", primary_key: "cpf"
-  add_foreign_key "treino_exercicios", "treinos", column: "data_inicio", primary_key: "data_inicio"
-  add_foreign_key "treino_exercicios", "treinos", column: "nome_treino", primary_key: "nome_treino"
+  add_foreign_key "treino_exercicios", "treinos", column: "cpf", primary_key: "cpf", name: "treino_exercicios_ibfk_1"
+  add_foreign_key "treino_exercicios", "treinos", column: "data_inicio", primary_key: "data_inicio", name: "treino_exercicios_ibfk_1"
+  add_foreign_key "treino_exercicios", "treinos", column: "nome_treino", primary_key: "nome_treino", name: "treino_exercicios_ibfk_1"
   add_foreign_key "treinos", "alunos", column: "cpf", primary_key: "cpf"
 end

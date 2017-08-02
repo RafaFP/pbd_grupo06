@@ -1,0 +1,16 @@
+.list-item.container-fluid{ id: "treino-#{treino.nome_treino}" }
+  %tr
+    %td.treino-nome-col
+      =treino.nome_treino
+    %td.treino-cpf-col
+      =treino.cpf
+    %td.treino-nome-aluno-col
+      =treino.aluno.nome_aluno
+    %td.treino-inicio-col
+      =treino.data_inicio
+    %td.treino-fim-col
+      =treino.data_fim
+  %tr
+    %td{ colspan: 5 }  
+      =render partial: 'meus_treino_exercicios_list', locals: { treino: treino }
+      

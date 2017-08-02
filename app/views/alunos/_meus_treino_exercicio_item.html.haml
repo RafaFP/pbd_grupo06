@@ -1,13 +1,9 @@
 .list-item.container-fluid{ id: "treino_exer-#{treino_exer.cpf}" }
   %tr
-    %td.treino_exer-cpf-col
-      =link_to treino_exer.cpf, aluno_path(treino_exer.treino.aluno.id)
-    %td.treino_exer-nome_treino-col
-      =treino_exer.nome_treino
-    %td.treino_exer-data_inicio-col
-      =treino_exer.data_inicio
     %td.treino_exer-nome_exercicio-col
       =treino_exer.nome_exercicio
+    %td.treino-exer-video-col
+      =link_to treino_exer.tipo_exercicio.video, treino_exer.tipo_exercicio.video
     %td.treino_exer-serie_rep-col
       =treino_exer.serie.to_s + " / " + treino_exer.repeticoes.to_s
     %td.treino_exer-intervalo-col

@@ -1,0 +1,21 @@
+%table.recording-list.table.table-hover
+  %thead
+    %tr
+      %th.col-sm-1.treino-exer-nome_exercicio-col= "Nome Exercício"
+      %th.col-sm-2.treino-exer-video-col= "Vídeo Exercício"
+      %th.col-sm-1.treino-exer-serie_rep-col= "Séries/Repetições"
+      %th.col-sm-1.treino-exer-intervalo-col= "Intervalo"
+      %th.col-sm-1.treino-exer-carga-col= "Carga"
+      %th.col-sm-1.treino-exer-tempo-col= "Tempo"
+      %th.col-sm-1.treino-exer-velocidade-col= "Velocidade"
+      %th.col-sm-1.treino-exer-inclinacao-col= "Inlcinação"
+      %th.col-sm-1.treino-exer-nivel-col= "Nivel"
+      %th.col-sm-2.treino-exer-observacao-col= "Observação"
+  
+  %tbody
+    - if treino.treino_exercicios.all.count <= 0
+      %tr
+        %td.nenhum{ colspan: 12 }= "Nenhum Treino-Exercício Cadastrado"
+    
+    - treino.treino_exercicios.all.each do |te|
+      = render partial: 'meus_treino_exercicio_item', locals: { treino_exer: te }

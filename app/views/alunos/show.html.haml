@@ -1,0 +1,36 @@
+#show-aluno
+  - id_aluno = request.path.split('/').last
+  - @aluno = Aluno.find_by(cpf: id_aluno)
+  %h3= "Visualização do aluno "
+  #form-aluno
+    = simple_form_for @aluno, :html => { :class => 'single-column' }, :url => alunos_path, wrapper: :horizontal_form, html: { class: "form-horizontal" }  do |f|
+      .modal-body
+        = f.input :cpf, :label => "CPF DO ALUNO", :autofocus => true, placeholder: "CPF do Aluno", disabled: true
+        = f.input :nome_aluno, :label => "NOME DO ALUNO", :autofocus => true, placeholder: "Nome do Aluno", disabled: true
+        = f.input :data_nascimento, :label => "Data de Nasc. do Aluno", as: :date, disabled: true
+        = f.input :idade, :label => "IDADE", placeholder: "Idade do Aluno", disabled: true
+        = f.input :sexo, :label => "SEXO", :collection => [['Masculino', 'Masculino'], ['Feminino', 'Feminino']], as: :radio_buttons, disabled: true
+        = f.input :telefone, :label => "TELEFONE", placeholder: "Telefone do Aluno", disabled: true
+        = f.input :email, :label => "E-MAIL", placeholder: "E-mail do Aluno", disabled: true
+        = f.input :peso_atual, :label => "PESO ATUAL", placeholder: "Peso Atual do Aluno", disabled: true
+        = f.input :peso_habitual, :label => "PESO HABITUAL", placeholder: "Peso Hab. do Aluno", disabled: true
+        = f.input :pratica_atividade, :label => "Pratica atividade", as: :boolean, disabled: true
+        = f.input :quantidade_atividade, :label => "Quantidade praticada", placeholder: "Quantidade praticada", disabled: true
+        = f.input :duracao_atividade, :label => "Duração da atividade", placeholder: "Duração da atividade", disabled: true
+        = f.input :intensidade_atividade, :label => "Intensidade da Atividade", placeholder: "Intensidade da Atividade", disabled: true
+        = f.input :tempo_inativo, :label => "Tempo Inativo", placeholder: "Tempo Inativo", disabled: true
+        = f.input :objetivo, :label => "Objetivo do Aluno", :as => :text, placeholder: "Objetivo do Aluno", disabled: true
+        = f.input :niveis_condicionamento, :label => "Níveis de cond.", placeholder: "Níveis de cond.", disabled: true
+        = f.input :turno_horario, :label => "Turno/Horário", placeholder: "Turno/Horário", disabled: true
+        = f.input :celular, :label => "Celular", placeholder: "Celular", disabled: true
+        = f.input :altura, :label => "Altura", placeholder: "Altura", disabled: true
+        = f.input :observacao, :label => "Observação", :as => :text, placeholder: "Observação", disabled: true
+      .modal-footer
+        #home-button
+          = link_to "Home", my_home_path, :class => 'btn btn-warning btn-block'
+        #delete-button
+        -#  = link_to "Remover", aluno_path(@aluno.id), method: :delete, :class => "btn btn-danger"
+        #edit-button
+          = link_to "Editar", edit_aluno_path(@aluno.id), :class => "btn btn-warning"
+  #treinos-list
+    = render partial: "alunos/meus_treinos_list"

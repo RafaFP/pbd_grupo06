@@ -1,0 +1,16 @@
+%table.recording-list.table.table-hover
+  %thead
+    %tr
+      %th.col-sm-2.treino-nome-col= "Nome do Treino"
+      %th.col-sm-3.treino-cpf-col= "CPF do Aluno"
+      %th.col-sm-3.treino-nome-aluno-col= "Nome do Aluno"
+      %th.col-sm-2.treino-inicio-col= "Início do treino"
+      %th.col-sm-2.treino-fim-col= "Fim do treino"
+  
+  %tbody
+    - if @aluno.treinos.count <= 0
+      %tr
+        %td.nenhum{ colspan: 5 }= "Nenhum Treino Cadastrado"
+    
+    - @aluno.treinos.each do |t|
+      = render partial: 'meus_treino_item', locals: { treino: t }

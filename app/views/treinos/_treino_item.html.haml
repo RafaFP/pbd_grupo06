@@ -1,9 +1,9 @@
 .list-item.container-fluid{ id: "treino-#{treino.nome_treino}" }
   %tr
     %td.treino-cpf-col
-      =treino.cpf
+      =link_to treino.cpf, aluno_path(treino.aluno.id)
     %td.treino-nome-aluno-col
-      =treino.aluno.nome_aluno
+      =link_to treino.aluno.nome_aluno, aluno_path(treino.aluno.id)
     %td.treino-nome-col
       =treino.nome_treino
     %td.treino-inicio-col

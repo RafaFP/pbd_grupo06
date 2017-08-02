@@ -1,0 +1,57 @@
+@import "bootstrap/mixins";
+
+body.alunos.show {
+  font-family: Courier New;
+  text-align: center;
+  background-color: #3B5998;
+  
+  #show-aluno {
+    border-radius: 30px;
+    padding: 2px 0 20px 0;
+    width: 85%;
+    margin: 40px auto;
+    background-color: #eedddd;
+
+    #form-aluno {
+      width: 850px;
+      margin: auto;
+    }
+
+    h3 {
+      font-size: 40px;
+      margin: 25px;
+    }
+
+    #button {
+      float: right;
+      display: inline-block;
+      text-align:center;
+    }
+
+    #home-button {
+      float: left;
+      display: inline-block;
+      text-align:center;
+    }
+    #delete-button {
+      display: inline-block;
+      text-align:center;
+    }
+    #edit-button {
+      float: right;
+      display: inline-block;
+      text-align:center;
+      margin-left: 5px;
+    }
+
+    #treinos-list{
+      text-align: left;
+      margin-top: 50px;
+      border-top: 2px solid #3B5998;
+      .nenhum {
+        text-align:center;
+        font-size: 20px;
+      }
+    }
+  }
+}
