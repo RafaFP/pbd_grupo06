@@ -1,0 +1,15 @@
+%table.recording-list.table.table-hover
+  %thead
+    %tr
+      %th.col-sm-3.rec-url-col= "url"
+      %th.col-sm-3.rec-chat-col= "chat"
+      %th.col-sm-3.rec-slide-col= "slide"
+      %th.col-sm-3.rec-meta-col= "metadata"
+  
+  %tbody
+    - if Recordings.all.count <= 0
+      %tr
+        %td.nenhum{ colspan: 12 }= "Nenhuma Gravação no BD"
+    
+    - Recordings.all.each do |r|
+      = render partial: 'recordings/recordings_item', locals: { rec: r }

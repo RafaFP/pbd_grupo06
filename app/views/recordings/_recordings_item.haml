@@ -1,0 +1,11 @@
+.list-item.container-fluid{ id: "rec-#{rec.id}" }
+  %tr
+    %td.rec-url-col
+      =rec.url
+    %td.rec-chat-col
+      =rec.chat
+    %td.rec-slide-col
+      =rec.slide
+    %td.rec-meta-col
+      -if rec.metadata.present?
+        =rec.metadata.name
