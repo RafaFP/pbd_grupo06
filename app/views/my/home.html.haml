@@ -3,7 +3,8 @@
   %h3= "Sistema de busca de gravações"
   #cadastro
     %h2= "Lista de gravações"
+    %input{:type=>"text"}
     #buttons
       = link_to "Buscar", "#", :class => 'btn btn-success btn-block'
 
-      = render "recordings/recordings_list"
+    = render "recordings/recordings_list"

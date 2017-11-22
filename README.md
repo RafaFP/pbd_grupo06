@@ -55,3 +55,8 @@ select concat(table_name, '.', column_name) as 'foreign key',
   from information_schema.key_column_usage 
  where referenced_table_name is not null and table_schema = 'pbd-grupo6_development';
 ```
+
+To run Solr for searching the files on db as seen on the guide (https://github.com/sunspot/sunspot/wiki/Adding-Sunspot-search-to-Rails-in-5-minutes-or-less)
+```bash
+bundle exec rake sunspot:solr:start
+```
