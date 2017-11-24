@@ -6,9 +6,9 @@
     %title= content_for?(:title) ? yield(:title) : "PBD"
     = csrf_meta_tag
 
-    = stylesheet_link_tag "application_print", :media => "print"
+    -#= stylesheet_link_tag "application_print", :media => "print"
     = stylesheet_link_tag "application", :media => "screen, projection"
-    = stylesheet_link_tag "_development" unless Rails.env == "production"
+    -#= stylesheet_link_tag "_development" unless Rails.env == "production"
     = yield :stylesheets
 
     = yield :headers

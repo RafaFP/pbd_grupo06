@@ -1,9 +1,10 @@
+= javascript_include_tag "application"
 - page_title "Home"
 #content
   %h3= "Sistema de busca de gravações"
   #cadastro
     %h2= "Lista de gravações"
-    %input{:type=>"text"}
+    %input{:name => "search", :type=>"text"}
     #buttons
       = link_to "Buscar", "#", :class => 'btn btn-success btn-block'
 
