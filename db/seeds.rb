@@ -36,7 +36,7 @@ Recording.create(
   url: "https://mconf-gravacao.ufrgs.br/presentation_export/e934d4d37e627774620b6e1100258869a65267c4-1505216352799/e934d4d37e627774620b6e1100258869a65267c4-1505216352799.zip",
   chat: "[18:35] Kelly C.: Hello and welcome to the the last Cheese class. [18:35] Vitoria R.: Hello, good morning again :). [18:36] Italo F.: I will parse real content soon.",
   slide: "Dolcelatte who moved my cheese cheese and wine. Pepper jack melted cheese cheesecake when the cheese comes out everybody's happy edam bavarian bergkase bocconcini macaroni cheese. Squirty cheese goat paneer dolcelatte bavarian bergkase gouda mascarpone bocconcini. When the cheese comes out everybody's happy cauliflower cheese roquefort cauliflower cheese cheesecake cheesy feet cheesy grin cheesy feet. Port-salut cheese and biscuits.",
-  published: true,
+  published: false,
   description: "This is the last presentation about cheese",
   author: "Kelly Chivas",
   title: "Cheese course 01 - 03",

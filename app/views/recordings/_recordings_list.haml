@@ -1,10 +1,13 @@
 %table.recording-list.table.table-hover
   %thead
     %tr
-      %th.col-sm-3.rec-url-col= "RECORDING URL"
+      %th.col-sm-1.rec-url-col= "RECORDING URL"
+      %th.col-sm-1.rec-title-col= "RECORDING TITLE"
+      %th.col-sm-1.description= "DESCRIPTION"
+      %th.col-sm-1.author= "AUTHOR"
+      %th.col-sm-1.institution= "INSTITUTION"
       %th.col-sm-3.rec-chat-col= "CHAT CONTENTS"
-      %th.col-sm-3.rec-slide-col= "SLIDES CONTENTS"
-      %th.col-sm-3.rec-name-col= "RECORDING NAME"
+      %th.col-sm-4.rec-slide-col= "SLIDES CONTENTS"
   
   %tbody
     - if Recording.all.count <= 0
@@ -22,11 +25,26 @@
 
             %tr
               %td.rec-url-col
-                =rec.url
+                - if rec.published
+                  =link_to rec.url
+                - else
+                  %p <font color='red'> <em>This recording is not available for download </font> </em>
                 %h6== Hit Value: (#{h hit.score})
+              %td.rec-title-col
+                =rec.title
+              %td.description
+                =rec.description
+              %td.author
+                =rec.author
+              %td.institution
+                =rec.institution
               %td.rec-chat-col
-                =rec.chat
+                -if rec.chat.present?
+                  =rec.chat
+                - else
+                  %p <font color='red'> <em>There was no chat logs for this recording</font> </em>
               %td.rec-slide-col
-                =rec.slide
-              %td.rec-name-col
-                =rec.name
+                - if rec.slide.present?
+                  =rec.slide
+                - else
+                  %p <font color='red'> <em>There was no presentation available for this recording</font> </em>
