@@ -48,15 +48,8 @@ sudo apt-get install mysql-server mysql-client libmysqlclient-dev
 
 Having everything installed and ready to run, get yourself a copy of the code (add as remote and pull master), create your branch and run `bundle exec rake db:create` to setup the database (remember to change the password to match your mysql's on config/database.yml).
 
-To check on what keys are foreign keys open mysql on your terminal by typing `mysql` and then use this code
-```mysql
-select concat(table_name, '.', column_name) as 'foreign key',
-       concat(referenced_table_name, '.', referenced_column_name) as 'references' 
-  from information_schema.key_column_usage 
- where referenced_table_name is not null and table_schema = 'pbd-grupo6_development';
-```
-
 To run Solr for searching the files on db as seen on the guide (https://github.com/sunspot/sunspot/wiki/Adding-Sunspot-search-to-Rails-in-5-minutes-or-less)
 ```bash
 bundle exec rake sunspot:solr:start
+bundle exec rake sunspot:reindex
 ```

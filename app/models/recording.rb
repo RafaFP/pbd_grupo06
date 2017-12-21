@@ -1,14 +1,14 @@
-class Metadatas < ActiveRecord::Base
-  belongs_to :recording, :class_name => 'Recordings'
+class Recording < ActiveRecord::Base
 
   searchable do
-    string   :meta_id
+    string   :url
+    text     :chat
+    text     :slide
     boolean  :published
     text     :description
     string   :author
     string   :title
     string   :name
     string   :institution
-    integer  :recordings_id
   end
 end

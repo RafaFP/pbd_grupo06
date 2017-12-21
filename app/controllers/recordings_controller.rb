@@ -1,7 +1,6 @@
 class RecordingsController < ApplicationController
   def search
-    @search = Recordings.search(:include => [:comments]) do
-    	puts 'hi'
+    @search = Recording.search(:include => [:comments]) do
       keywords(params[:q])
     end
   end

@@ -4,20 +4,20 @@
       %th.col-sm-3.rec-url-col= "RECORDING URL"
       %th.col-sm-3.rec-chat-col= "CHAT CONTENTS"
       %th.col-sm-3.rec-slide-col= "SLIDES CONTENTS"
-      %th.col-sm-3.rec-meta-col= "METADATA FOR RECORDING"
+      %th.col-sm-3.rec-name-col= "RECORDING NAME"
   
   %tbody
-    - if Recordings.all.count <= 0
+    - if Recording.all.count <= 0
       %tr
         %td.nenhum{ colspan: 12 }= "Nenhuma Gravação no BD"
     
     - unless params[:q].present?
-      - Recordings.all.each do |r|
-        = render partial: 'recordings/recordings_item', locals: { rec: r }
+      - Recording.all.each do |r|
+        = render partial: 'recordings/recording_item', locals: { rec: r }
 
     - if params[:q].present?
       .results
-        - Recordings.search{keywords [params[:q]]}.each_hit_with_result do |hit, rec|
+        - Recording.search{keywords [params[:q]]}.each_hit_with_result do |hit, rec|
           .result
 
             %tr
@@ -28,6 +28,5 @@
                 =rec.chat
               %td.rec-slide-col
                 =rec.slide
-              %td.rec-meta-col
-                -if rec.metadata.present?
-                  =rec.metadata.name
+              %td.rec-name-col
+                =rec.name
