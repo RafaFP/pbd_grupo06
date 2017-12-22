@@ -2,7 +2,7 @@
   %tr
     %td.rec-url-col
       - if rec.published
-        =link_to rec.url
+        =link_to rec.url, rec.url
       - else
         %p <font color='red'> <em>This recording is not available for download </font> </em>
     %td.rec-title-col

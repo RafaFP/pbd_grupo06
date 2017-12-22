@@ -53,3 +53,11 @@ To run Solr for searching the files on db as seen on the guide (https://github.c
 bundle exec rake sunspot:solr:start
 bundle exec rake sunspot:reindex
 ```
+
+To reset the solr folders if you are having trouble with reindex reset the directory
+```bash
+rake sunspot:solr:stop
+rm -rvf solr (Delete your /solr directory)
+rake sunspot:solr:start
+rake sunspot:solr:reindex
+```

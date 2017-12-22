@@ -81,53 +81,53 @@ Recording.create(
   institution: "NASA"
 )
 
-# # curta, só um slide e um video ###############################################################################################################################################
-# Recording.create(
-#   url: "https://mconf-gravacao.ufrgs.br/presentation_export/a135f395ca6b0098114abaa85316cb10eef0a3e3-1490726620673/a135f395ca6b0098114abaa85316cb10eef0a3e3-1490726620673.zip",
-#   chat: nil,
-#   slide: ,
-#   published: true,
-#   description: ,
-#   author: ,
-#   title: ,
-#   name: ,
-#   institution: 
-# )
+# curta, só um slide e um video ###############################################################################################################################################
+Recording.create(
+  url: "https://mconf-gravacao.ufrgs.br/presentation_export/a135f395ca6b0098114abaa85316cb10eef0a3e3-1490726620673/a135f395ca6b0098114abaa85316cb10eef0a3e3-1490726620673.zip",
+  chat: nil,
+  slide: "Brownie wafer jelly-o fruitcake caramels croissant toffee jelly-o. Brownie jelly beans tootsie roll liquorice pie topping. Liquorice croissant caramels tootsie roll fruitcake tart. Tootsie roll cookie toffee. Gummi bears topping pastry bonbon biscuit lollipop sesame snaps powder. Apple pie cupcake topping pudding fruitcake fruitcake. Candy sweet roll jelly beans wafer jujubes ice cream halvah toffee caramels.",
+  published: true,
+  description: "Cupcake Lessons",
+  author: "Buddy Valastro",
+  title: "cupcake101",
+  name: "Cupcake 101",
+  institution: "Bakery"
+)
 
-# # compartilhamento de tela ####################################################################################################################################################
-# Recording.create(
-#   url: "https://mconf-gravacao.ufrgs.br/presentation_export/e8a59fe03f8e6a358a4968c45a87800894dc426c-1510049682589/e8a59fe03f8e6a358a4968c45a87800894dc426c-1510049682589.zip",
-#   chat: ,
-#   slide: ,
-#   published: true,
-#   description: ,
-#   author: ,
-#   title: ,
-#   name: ,
-#   institution: 
-# )
-# Recording.create(
-#   url: "https://mconf-gravacao.ufrgs.br/presentation_export/e8a59fe03f8e6a358a4968c45a87800894dc426c-1509998686850/e8a59fe03f8e6a358a4968c45a87800894dc426c-1509998686850.zip",
-#   chat: ,
-#   slide: ,
-#   published: ,
-#   description: ,
-#   author: ,
-#   title: ,
-#   name: ,
-#   institution: 
-# )
-# Recording.create(
-#   url: "https://mconf-gravacao.ufrgs.br/presentation_export/4ccad54b525176d164fe0b92831a052b45aa9edb-1459361123201/4ccad54b525176d164fe0b92831a052b45aa9edb-1459361123201.zip",
-#   chat: ,
-#   slide: ,
-#   published: true,
-#   description: ,
-#   author: ,
-#   title: ,
-#   name: ,
-#   institution: 
-# )
+# compartilhamento de tela ####################################################################################################################################################
+Recording.create(
+  url: "https://mconf-gravacao.ufrgs.br/presentation_export/e8a59fe03f8e6a358a4968c45a87800894dc426c-1510049682589/e8a59fe03f8e6a358a4968c45a87800894dc426c-1510049682589.zip",
+  chat: "[20:20] Cat: Hi.",
+  slide: "Go into a room to decide you didn't want to be in there anyway sleep on keyboard meow to be let out but missing until dinner time lick butt lick sellotape. Make meme, make cute face rub face on everything, white cat sleeps on a black shirt lick the plastic bag. Meow all night knock over christmas tree meoooow, give attitude. Milk the cow purr while eating or cat cat moo moo lick ears lick paws, scratch leg; meow for can opener to feed me kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff wack the mini furry mouse. Attack the dog then pretend like nothing happened. Scratch me there, elevator butt put toy mouse in food bowl run out of litter box at full speed destroy couch, but curl into a furry donut, or dream about hunting birds. Stare at ceiling light has closed eyes but still sees you hopped up on catnip.",
+  published: true,
+  description: "This is a room to talk about cats",
+  author: "Vitória Rosa",
+  title: "cat_room",
+  name: "Cat Room",
+  institution: "Cat Room"
+)
+Recording.create(
+  url: "https://mconf-gravacao.ufrgs.br/presentation_export/e8a59fe03f8e6a358a4968c45a87800894dc426c-1509998686850/e8a59fe03f8e6a358a4968c45a87800894dc426c-1509998686850.zip",
+  chat: "[22:21] Cat: Cool",
+  slide: "Warm up laptop with butt lick butt fart rainbows until owner yells pee in litter box hiss at cats attack feet. Climb a tree, wait for a fireman jump to fireman then scratch his face eat owner's food, scratch leg; meow for can opener to feed me but try to jump onto window and fall while scratching at wall. Leave hair everywhere adventure always hiding behind the couch until lured out by a feathery toy so chirp at birds please stop looking at your phone and pet me. Meowing chowing and wowing purr while eating scratch the furniture and meow paw at beetle and eat it before it gets away. Sleep on keyboard caticus cuteicus yet then cats take over the world the fat cat sat on the mat bat away with paws find empty spot in cupboard and sleep all day.",
+  published: false,
+  description: "This is a room to talk about cats",
+  author: "Vitória Rosa",
+  title: "cat_room",
+  name: "Cat Room",
+  institution: "Cat Room"
+)
+Recording.create(
+  url: "https://mconf-gravacao.ufrgs.br/presentation_export/4ccad54b525176d164fe0b92831a052b45aa9edb-1459361123201/4ccad54b525176d164fe0b92831a052b45aa9edb-1459361123201.zip",
+  chat: "[12:50] Cat: Good chat",
+  slide: "You are a captive audience while sitting on the toilet, pet me tuxedo cats always looking dapper or lay on arms while you're using the keyboard. Massacre a bird in the living room and then look like the cutest and most innocent animal on the planet munch on tasty moths. Scratch the postman wake up lick paw wake up owner meow meow. Soft kitty warm kitty little ball of furr who's the baby. Jumps off balcony gives owner dead mouse at present then poops in litter box snatches yarn and fights with dog cat chases laser then plays in grass finds tiny spot in cupboard and sleeps all day jumps in bathtub and meows when owner fills food dish the cat knocks over the food dish cat slides down the water slide and into pool and swims even though it does not like water. Hide at bottom of staircase to trip human run in circles, yet eat too much then proceed to regurgitate all over living room carpet while humans eat dinner.",
+  published: true,
+  description: "This is a room to talk about cats",
+  author: "Vitória Rosa",
+  title: "cat_room",
+  name: "Cat Room",
+  institution: "Cat Room"
+)
 
 # # sem apresentação nem vídeo ##################################################################################################################################################
 # Recording.create(
