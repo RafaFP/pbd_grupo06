@@ -15,7 +15,10 @@
       =rec.institution
     %td.rec-chat-col
       -if rec.chat.present?
-        =rec.chat
+        =rec.chat.slice(0, 150)
+        -if rec.chat.size > 150
+          = "[...]"
+          = link_to "[Full chat]", recording_full_chat_path(rec.id)
       - else
         %p <font color='red'> <em>There was no chat logs for this recording</font> </em>
     %td.rec-slide-col

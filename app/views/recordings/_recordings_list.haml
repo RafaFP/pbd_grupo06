@@ -6,8 +6,8 @@
       %th.col-sm-1.description= "DESCRIPTION"
       %th.col-sm-1.author= "AUTHOR"
       %th.col-sm-1.institution= "INSTITUTION"
-      %th.col-sm-3.rec-chat-col= "CHAT CONTENTS"
-      %th.col-sm-4.rec-slide-col= "SLIDES CONTENTS"
+      %th.col-sm-4.rec-chat-col= "CHAT CONTENTS"
+      %th.col-sm-3.rec-slide-col= "SLIDES CONTENTS"
   
   %tbody
     - if Recording.all.count <= 0
@@ -40,7 +40,9 @@
                 =rec.institution
               %td.rec-chat-col
                 -if rec.chat.present?
-                  =rec.chat
+                  =rec.chat.slice(0, 150)
+                  -if rec.chat.size > 150
+                    = link_to "teste", "link"
                 - else
                   %p <font color='red'> <em>There was no chat logs for this recording</font> </em>
               %td.rec-slide-col

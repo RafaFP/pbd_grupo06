@@ -17,7 +17,7 @@ module ApplicationHelper
   def page_title(title, opt ={})
     inside_resource = " #{opt[:in]} &#149;" if opt[:in].present?
     content_for :title do
-      "#{title} &#149;#{inside_resource} PBD".html_safe
+      "#{title} &#149;#{inside_resource} Busca de Gravações".html_safe
     end
   end
 
