@@ -1,0 +1,7 @@
+- rec = Recording.find_by(id: params[:recording_id])
+- page_title "Full Chat"
+%h2= link_to "HOME", my_home_path
+#content
+  %h3= "Chat completo da gravação"
+  #cadastro
+    =rec.chat
